@@ -1,15 +1,11 @@
 {
     "export": {
         "prefix": "export",
-        "body": "(export \"${name}\" $${name})"
+        "body": "(export \"${1:name}\" $${1:name})$2"
     },
     "import": {
         "prefix": "import",
-        "body": "(import $${name} \"${from}\" \"${name}\" (param ${type}))"
-    },
-    "if": {
-        "prefix": "if",
-        "body": "(if ($1)\n\t$2\n)"
+        "body": "(import $${1:name} \"${2:from}\" \"${3:name}\" (param ${4:type}))$5"
     },
     "loop": {
         "prefix": "loop",
@@ -17,6 +13,6 @@
     },
     "func": {
         "prefix": "func",
-        "body": "(func $${name} (param $1) (result $2)\n\t$3\n)"
+        "body": "(func $${1:name} (param $2) (result $3)\n\t$4\n)"
     }
 }
