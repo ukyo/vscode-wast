@@ -21,6 +21,7 @@ export class WastValidationProvider {
     
     onDidOpenDocument(document: TextDocument) {
         if (document.isUntitled) return;
+        if (!/\.wast$/.test(document.fileName)) return;
         this.documents[document.fileName] = document;
         this.currentDocument = document;
         this.validate(document);
@@ -28,10 +29,12 @@ export class WastValidationProvider {
     
     onDidCloseDocument(document: TextDocument) {
         if (document.isUntitled) return;
+        if (!/\.wast$/.test(document.fileName)) return;
         delete this.documents[document.fileName];
     }
     
     onDidSaveDocument(document: TextDocument) {
+        if (!/\.wast$/.test(document.fileName)) return;
         this.currentDocument = document;
         this.validate(document);
     }
