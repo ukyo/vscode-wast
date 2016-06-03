@@ -1,5 +1,5 @@
 export const config = {
-    sexprwasmPath: 'wast.sexprwasmPath'
+    sexprwasmPath: 'sexprwasmPath'
 };
 
 export const modeId = 'wast';

@@ -1,63 +1,66 @@
 {
-  "name": "wast",
-  "description": "WebAssembly(S-expression) support",
-  "version": "0.0.1",
-  "publisher": "ukyo",
-  "engines": {
-    "vscode": "^1.0.0"
-  },
-  "categories": [
-    "Languages"
-  ],
-  "activationEvents": [
-    "onLanguage:wast"
-  ],
-  "main": "./out/extension.js",
-  "contributes": {
-    "languages": [
-      {
-        "id": "wast",
-        "aliases": [
-          "Wast",
-          "wast"
-        ],
-        "extensions": [
-          ".wast"
-        ],
-        "configuration": "./wast.configuration.json"
-      }
+    "name": "wast",
+    "description": "WebAssembly(S-expression) support",
+    "version": "0.0.2",
+    "publisher": "ukyo",
+    "engines": {
+        "vscode": "^1.0.0"
+    },
+    "categories": [
+        "Languages"
     ],
-    "grammars": [
-      {
-        "language": "wast",
-        "scopeName": "source.wast",
-        "path": "./syntaxes/wast.tmLanguage"
-      }
+    "activationEvents": [
+        "onLanguage:wast"
     ],
-    "snippets": [
-      {
-        "language": "wast",
-        "path": "./snippets/wast.json"
-      }
-    ]
-  },
-  "scripts": {
-    "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
-    "vscode.d.ts": "node ./node_modules/vscode/bin/install"
-  },
-  "configuration": {
-    "type": "object",
-    "title": "Wast configuration",
-    "properties": {
-      "wast.sexprwasmPath": {
-        "type": "string",
-        "default": null,
-        "description": "sexpr-wasm path."
-      }
+    "main": "./out/extension.js",
+    "contributes": {
+        "languages": [
+            {
+                "id": "wast",
+                "aliases": [
+                    "Wast",
+                    "wast"
+                ],
+                "extensions": [
+                    ".wast"
+                ],
+                "configuration": "./wast.configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "wast",
+                "scopeName": "source.wast",
+                "path": "./syntaxes/wast.tmLanguage"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "wast",
+                "path": "./snippets/wast.json"
+            }
+        ],
+        "configuration": {
+            "type": "object",
+            "title": "Wast configuration",
+            "properties": {
+                "wast.sexprwasmPath": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "default": null,
+                    "description": "sexpr-wasm path."
+                }
+            }
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+        "vscode.d.ts": "node ./node_modules/vscode/bin/install"
+    },
+    "devDependencies": {
+        "typescript": "^1.8.10",
+        "vscode": "^0.11.13"
     }
-  },
-  "devDependencies": {
-    "typescript": "^1.8.10",
-    "vscode": "^0.11.13"
-  }
 }
