@@ -38,7 +38,7 @@ export class WastValidationProvider {
     
     onDidChangeConfiguration() {
         const config = workspace.getConfiguration(constants.modeId);
-        this.sexprwasmPath = config.get(constants.config.sexprwasmPath, null);
+        this.sexprwasmPath = config[constants.config.sexprwasmPath];
         this.validate(this.currentDocument);
     }
     
