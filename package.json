@@ -1,10 +1,10 @@
 {
     "name": "wast",
     "description": "WebAssembly(S-expression) support",
-    "version": "0.0.4",
+    "version": "0.1.4",
     "publisher": "ukyo",
     "engines": {
-        "vscode": "^1.0.0"
+        "vscode": "^1.3.0"
     },
     "categories": [
         "Languages"
