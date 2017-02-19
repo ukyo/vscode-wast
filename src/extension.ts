@@ -7,13 +7,14 @@ import { window, languages, workspace, TextDocument, ExtensionContext, Diagnosti
 import { WastCompletionItemProvider } from './features/completionItemProvider';
 import { WastValidationProvider } from './features/validationProvider';
 import * as constants from './constants';
+import { registerCommands } from './commands';
 
 export function activate(context: ExtensionContext) {
     languages.setLanguageConfiguration(constants.modeId, {
-        indentationRules: {
-            decreaseIndentPattern: /^[^(]*\).*/,
-            increaseIndentPattern: /.*\([^)]*$/
-        },
+        // indentationRules: {
+        //     decreaseIndentPattern: /^[^(]*\).*/,
+        //     increaseIndentPattern: /.*\([^)]*$/
+        // },
         comments: {
             lineComment: ';;',
             blockComment: ['(;', ';)']
@@ -26,4 +27,5 @@ export function activate(context: ExtensionContext) {
     languages.registerCompletionItemProvider(constants.modeId, new WastCompletionItemProvider());
     let currentDiagnostics = languages.createDiagnosticCollection(constants.modeId);
     const validationProvider = new WastValidationProvider(currentDiagnostics);
+    registerCommands();
 }

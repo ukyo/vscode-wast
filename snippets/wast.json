@@ -1,18 +1,34 @@
 {
     "export": {
         "prefix": "export",
-        "body": "(export \"${1:name}\" $${1:name})$2"
+        "body": "(export \"${1:name}\" (${2:func|table|memory|global} $${3:label_or_id}))$4"
     },
     "import": {
         "prefix": "import",
-        "body": "(import $${1:name} \"${2:from}\" \"${3:name}\" (param ${4:type}))$5"
-    },
-    "loop": {
-        "prefix": "loop",
-        "body": "(loop $exit $cont\n\t$1\n)"
+        "body": "(import \"${2:module_str}\" \"${3:field_str}\" (${4:func|table|memory|global} $${5:label_or_id}))$6"
     },
     "func": {
         "prefix": "func",
-        "body": "(func $${1:name} (param $2) (result $3)\n\t$4\n)"
+        "body": "(func $${1:name} (param $2) (result $3)\n\t$4)"
+    },
+    "assert_return": {
+        "prefix": "assert_return",
+        "body": "(assert_return (invoke \"${1:name}\" ${2:args}) (${3:expected}))$4"
+    },
+    "assert_return_nan": {
+        "prefix": "assert_return_nan",
+        "body": "(assert_return (invoke \"${1:name}\" ${2:args}))$3"
+    },
+    "assert_trap": {
+        "prefix": "assert_trap",
+        "body": "(assert_trap (invoke \"${1:name}\" ${2:args}) \"${3:message}\")$4"
+    },
+    "assert_invalid": {
+        "prefix": "assert_invalid",
+        "body": "(assert_invalid (invoke \"${1:name}\" ${2:args}) \"${3:message}\")$4"
+    },
+    "assert_exhaustion": {
+        "prefix": "assert_exhaustion",
+        "body": "(assert_exhaustion (invoke \"${1:name}\" ${2:args}) \"call stack exhausted\")$3"
     }
 }
