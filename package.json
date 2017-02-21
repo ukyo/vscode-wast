@@ -1,7 +1,7 @@
 {
     "name": "wast",
     "description": "WebAssembly(S-expression) support",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "publisher": "ukyo",
     "engines": {
         "vscode": "^1.5.0"
