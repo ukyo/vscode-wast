@@ -28,13 +28,13 @@
             <key>name</key>
             <string>keyword.declaration.wast</string>
             <key>match</key>
-            <string>\b(memory|import|export|func|param|local|module|result|type|anyfunc|table|elem|data)\b</string>
+            <string>\b(memory|import|export|func|param|local|module|result|type|anyfunc|table|elem|data|global)\b</string>
         </dict>
         <dict>
             <key>name</key>
             <string>keyword.control.wast</string>
             <key>match</key>
-            <string>\b(unreachable|nop|block|loop|if|else|end|br|br_if|br_table|return)\b</string>
+            <string>\b(unreachable|nop|block|loop|if|then|else|end|br|br_if|br_table|return)\b</string>
         </dict>
         <dict>
             <key>name</key>
@@ -108,7 +108,7 @@
             <key>name</key>
             <string>variable.other.label.wast</string>
             <key>match</key>
-            <string>$\S+</string>
+            <string>\$\S+</string>
         </dict>
         <dict>
             <key>name</key>

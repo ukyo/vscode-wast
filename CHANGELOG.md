@@ -5,6 +5,11 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [0.2.1]
+### Added
+- Add snippets
+- Add syntaxes
+
 ## [0.2.0]
 ### Added
 - Add commands

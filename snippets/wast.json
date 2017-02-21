@@ -1,15 +1,43 @@
 {
-    "export": {
-        "prefix": "export",
-        "body": "(export \"${1:name}\" (${2:func|table|memory|global} $${3:label_or_id}))$4"
+    "export-func": {
+        "prefix": "exf",
+        "body": "(export \"${1:name}\" (func $${2:label}))$3"
     },
-    "import": {
-        "prefix": "import",
-        "body": "(import \"${2:module_str}\" \"${3:field_str}\" (${4:func|table|memory|global} $${5:label_or_id}))$6"
+    "export-memory": {
+        "prefix": "exm",
+        "body": "(export \"${1:name}\" (memory 0))$2"
+    },
+    "export-global": {
+        "prefix": "exg",
+        "body": "(export \"${1:name}\" (global $${2:label}))$3"
+    },
+    "export-table": {
+        "prefix": "ext",
+        "body": "(export \"${1:name}\" (table $${2:label}))$3"
+    },
+    "import-func": {
+        "prefix": "imf",
+        "body": "(import \"${1:module_str}\" \"${2:field_str}\" (func $${3:label} (param $4) (result $5)))$6"
+    },
+    "import-memory": {
+        "prefix": "imm",
+        "body": "(import \"${1:module_str}\" \"${2:field_str}\" (memory ${3:initial} ${4:maximum}))$5"
+    },
+    "import-global": {
+        "prefix": "img",
+        "body": "(import \"${1:module_str}\" \"${2:field_str}\" (global $${3:label} ${4:type}))$5"
+    },
+    "import-table": {
+        "prefix": "imt",
+        "body": "(import \"${1:module_str}\" \"${2:field_str}\" (table ${3:initial} ${4:maximum} anyfunc))$5"
     },
     "func": {
-        "prefix": "func",
+        "prefix": "fn",
         "body": "(func $${1:name} (param $2) (result $3)\n\t$4)"
+    },
+    "table": {
+        "prefix": "tbl",
+        "body": "(table ${1:initial} ${2:maximum} anyfunc)$3"
     },
     "assert_return": {
         "prefix": "assert_return",
