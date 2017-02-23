@@ -28,7 +28,7 @@
             <key>name</key>
             <string>keyword.declaration.wast</string>
             <key>match</key>
-            <string>\b(memory|import|export|func|param|local|module|result|type|anyfunc|table|elem|data|global)\b</string>
+            <string>\b(memory|import|export|func|param|local|module|result|type|anyfunc|table|elem|data|global|mut)\b</string>
         </dict>
         <dict>
             <key>name</key>
