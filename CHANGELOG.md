@@ -5,6 +5,12 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [0.2.3]
+### Added
+- Add snippets
+- Add syntaxes
+- Add wasm icon
+
 ## [0.2.2]
 ### Fixed
 - Fix syntaxes
