@@ -3,6 +3,7 @@
     "description": "WebAssembly(S-expression) support",
     "version": "0.2.3",
     "publisher": "ukyo",
+    "icon": "images/web-assembly-icon-128px.png",
     "engines": {
         "vscode": "^1.5.0"
     },
