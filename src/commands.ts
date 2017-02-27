@@ -12,6 +12,7 @@ function run(command: string, options: string) {
             outputChannel.show();
             outputChannel.appendLine(s);
             outputChannel.append(stdout);
+            outputChannel.append(stderr);
         });
     } catch (e) { }
 }

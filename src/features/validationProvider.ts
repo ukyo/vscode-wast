@@ -70,7 +70,7 @@ class WastErrorParser {
 
     parseErrorInfoLine() {
         let s = this.lines[this.index];
-        let m = s.match(/^(.+wast):(\d+):(\d+):\s*(.+)$/);
+        let m = s.match(/^(.+wast?):(\d+):(\d+):\s*(.+)$/);
         if (!m) return;
         let [, filePath, row, col, message] = m;
         this.currentMessage = message;

@@ -5,6 +5,11 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [0.2.4]
+### Fixed
+- Fix validation provider
+- Fix build command
+
 ## [0.2.3]
 ### Added
 - Add snippets
