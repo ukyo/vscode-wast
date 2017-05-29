@@ -32,7 +32,7 @@ export function registerCommands() {
 
     vscode.commands.registerCommand('wast.build', () => {
         const { fsPath } = vscode.window.activeTextEditor.document.uri;
-        const outPath = fsPath.replace(/\.wast?$/, ".wasm");
+        const outPath = fsPath.replace(/\.(wast|wat|was)$/, ".wasm");
         run(`out/wast2wasm`, `${fsPath} -o ${outPath}`);
     });
 }

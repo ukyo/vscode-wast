@@ -5,6 +5,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [0.2.6]
+### Fixed
+- Fix save bug
+
 ## [0.2.5]
 ### Added
 - Add .wat extension support
