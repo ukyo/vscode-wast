@@ -5,6 +5,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [0.2.5]
+### Added
+- Add .wat extension support
+
 ## [0.2.4]
 ### Fixed
 - Fix validation provider
